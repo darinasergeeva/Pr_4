@@ -28,148 +28,107 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridPartners = new DataGridView();
-            panelControls = new Panel();
-            labeltype = new Label();
-            labelName = new Label();
-            labeltelephone = new Label();
-            labelrating = new Label();
+            flowLayoutPanelTop = new FlowLayoutPanel();
             buttonAdd = new Button();
-            buttonEdit = new Button();
-            buttonDelete = new Button();
             buttonUpdate = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridPartners).BeginInit();
+            buttonDelete = new Button();
+            panelFill = new Panel();
+            dataGridViewTypes = new DataGridView();
+            flowLayoutPanelTop.SuspendLayout();
+            panelFill.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewTypes).BeginInit();
             SuspendLayout();
             // 
-            // dataGridPartners
+            // flowLayoutPanelTop
             // 
-            dataGridPartners.BackgroundColor = Color.White;
-            dataGridPartners.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridPartners.Dock = DockStyle.Fill;
-            dataGridPartners.Location = new Point(0, 0);
-            dataGridPartners.Name = "dataGridPartners";
-            dataGridPartners.Size = new Size(644, 450);
-            dataGridPartners.TabIndex = 0;
-            // 
-            // panelControls
-            // 
-            panelControls.BackColor = Color.White;
-            panelControls.Dock = DockStyle.Top;
-            panelControls.Location = new Point(0, 0);
-            panelControls.Name = "panelControls";
-            panelControls.Size = new Size(644, 100);
-            panelControls.TabIndex = 1;
-            // 
-            // labeltype
-            // 
-            labeltype.BackColor = Color.White;
-            labeltype.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labeltype.Location = new Point(12, 120);
-            labeltype.Name = "labeltype";
-            labeltype.Size = new Size(231, 23);
-            labeltype.TabIndex = 2;
-            labeltype.Text = "Тип | Наименование партнёра";
-            // 
-            // labelName
-            // 
-            labelName.BackColor = Color.Transparent;
-            labelName.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelName.Location = new Point(12, 157);
-            labelName.Name = "labelName";
-            labelName.Size = new Size(231, 23);
-            labelName.TabIndex = 3;
-            labelName.Click += label1_Click;
-            // 
-            // labeltelephone
-            // 
-            labeltelephone.BackColor = Color.Transparent;
-            labeltelephone.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labeltelephone.Location = new Point(12, 203);
-            labeltelephone.Name = "labeltelephone";
-            labeltelephone.Size = new Size(231, 23);
-            labeltelephone.TabIndex = 4;
-            // 
-            // labelrating
-            // 
-            labelrating.BackColor = Color.Transparent;
-            labelrating.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelrating.Location = new Point(12, 248);
-            labelrating.Name = "labelrating";
-            labelrating.Size = new Size(231, 23);
-            labelrating.TabIndex = 5;
+            flowLayoutPanelTop.AutoSize = true;
+            flowLayoutPanelTop.Controls.Add(buttonAdd);
+            flowLayoutPanelTop.Controls.Add(buttonUpdate);
+            flowLayoutPanelTop.Controls.Add(buttonDelete);
+            flowLayoutPanelTop.Dock = DockStyle.Top;
+            flowLayoutPanelTop.Location = new Point(0, 0);
+            flowLayoutPanelTop.Name = "flowLayoutPanelTop";
+            flowLayoutPanelTop.Padding = new Padding(10);
+            flowLayoutPanelTop.Size = new Size(1012, 61);
+            flowLayoutPanelTop.TabIndex = 0;
             // 
             // buttonAdd
             // 
-            buttonAdd.BackColor = SystemColors.ActiveCaption;
-            buttonAdd.Location = new Point(12, 347);
+            buttonAdd.Location = new Point(13, 13);
             buttonAdd.Name = "buttonAdd";
-            buttonAdd.Size = new Size(75, 23);
-            buttonAdd.TabIndex = 6;
+            buttonAdd.Size = new Size(150, 35);
+            buttonAdd.TabIndex = 0;
             buttonAdd.Text = "Добавить";
-            buttonAdd.UseVisualStyleBackColor = false;
-            // 
-            // buttonEdit
-            // 
-            buttonEdit.BackColor = SystemColors.ActiveCaption;
-            buttonEdit.Location = new Point(112, 347);
-            buttonEdit.Name = "buttonEdit";
-            buttonEdit.Size = new Size(97, 23);
-            buttonEdit.TabIndex = 7;
-            buttonEdit.Text = "Редактировать";
-            buttonEdit.UseVisualStyleBackColor = false;
-            // 
-            // buttonDelete
-            // 
-            buttonDelete.BackColor = SystemColors.ActiveCaption;
-            buttonDelete.Location = new Point(233, 347);
-            buttonDelete.Name = "buttonDelete";
-            buttonDelete.Size = new Size(75, 23);
-            buttonDelete.TabIndex = 8;
-            buttonDelete.Text = "Удалить";
-            buttonDelete.UseVisualStyleBackColor = false;
+            buttonAdd.UseVisualStyleBackColor = true;
             // 
             // buttonUpdate
             // 
-            buttonUpdate.BackColor = SystemColors.ActiveCaption;
-            buttonUpdate.Location = new Point(333, 347);
+            buttonUpdate.Location = new Point(169, 13);
             buttonUpdate.Name = "buttonUpdate";
-            buttonUpdate.Size = new Size(75, 23);
-            buttonUpdate.TabIndex = 9;
-            buttonUpdate.Text = "Обновить";
-            buttonUpdate.UseVisualStyleBackColor = false;
+            buttonUpdate.Size = new Size(150, 35);
+            buttonUpdate.TabIndex = 1;
+            buttonUpdate.Text = "Редактировать";
+            buttonUpdate.UseVisualStyleBackColor = true;
+            // 
+            // buttonDelete
+            // 
+            buttonDelete.Location = new Point(325, 13);
+            buttonDelete.Name = "buttonDelete";
+            buttonDelete.Size = new Size(150, 35);
+            buttonDelete.TabIndex = 2;
+            buttonDelete.Text = "Удалить";
+            buttonDelete.UseVisualStyleBackColor = true;
+            // 
+            // panelFill
+            // 
+            panelFill.Controls.Add(dataGridViewTypes);
+            panelFill.Dock = DockStyle.Fill;
+            panelFill.Location = new Point(0, 61);
+            panelFill.Name = "panelFill";
+            panelFill.Padding = new Padding(10);
+            panelFill.Size = new Size(1012, 689);
+            panelFill.TabIndex = 1;
+            // 
+            // dataGridViewTypes
+            // 
+            dataGridViewTypes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
+            dataGridViewTypes.BackgroundColor = Color.White;
+            dataGridViewTypes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewTypes.Dock = DockStyle.Fill;
+            dataGridViewTypes.Location = new Point(10, 10);
+            dataGridViewTypes.MultiSelect = false;
+            dataGridViewTypes.Name = "dataGridViewTypes";
+            dataGridViewTypes.ReadOnly = true;
+            dataGridViewTypes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewTypes.Size = new Size(992, 669);
+            dataGridViewTypes.TabIndex = 0;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(11F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(644, 450);
-            Controls.Add(buttonUpdate);
-            Controls.Add(buttonDelete);
-            Controls.Add(buttonEdit);
-            Controls.Add(buttonAdd);
-            Controls.Add(labelrating);
-            Controls.Add(labeltelephone);
-            Controls.Add(labelName);
-            Controls.Add(labeltype);
-            Controls.Add(panelControls);
-            Controls.Add(dataGridPartners);
+            BackColor = Color.White;
+            ClientSize = new Size(1012, 750);
+            Controls.Add(panelFill);
+            Controls.Add(flowLayoutPanelTop);
+            Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            Margin = new Padding(5);
             Name = "Form1";
-            Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)dataGridPartners).EndInit();
+            Text = "Партнёры";
+            flowLayoutPanelTop.ResumeLayout(false);
+            panelFill.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridViewTypes).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridPartners;
-        private Panel panelControls;
-        private Label labeltype;
-        private Label labelName;
-        private Label labeltelephone;
-        private Label labelrating;
+        private FlowLayoutPanel flowLayoutPanelTop;
         private Button buttonAdd;
-        private Button buttonEdit;
-        private Button buttonDelete;
         private Button buttonUpdate;
+        private Button buttonDelete;
+        private Panel panelFill;
+        private DataGridView dataGridViewTypes;
     }
 }
